@@ -64,6 +64,8 @@ class TPRNNBasicModel(object):
       learning_rate_decay_factor: decay learning rate by this much when needed.
       summaries_dir: where to log progress for tensorboard.
       dtype: the data type to use to store internal variables.
+      tprnn_scale: TP-RNN scale parameter = 2.
+      tprnn_layers: TP-RNN number of hierarchical levels parameter = 2.
     """
     self.dataset = dataset
     self.input_size = 54 if dataset == 'human' else 26
